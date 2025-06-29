@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programs</title>
+    <style>
+      div {
+        width:100%;
+        height:auto;
+        background-color:bisque;
+        margin:10px;
+        padding:10px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Program Outputs</h2>
+
+    <div id="program1"></div>
+    <div id="program2"></div>
+    <div id="program3"></div>
+    <div id="program4"></div>
+    <div id="program5"></div>
+
+    <script>
+        // 1. Program to print name and address
+        const name = "Satyam Kumar";
+        const address = "Sasaram, Rohtas , Bihar";
+        document.getElementById("program1").innerHTML = 
+        `<h3>1. Name and Address:</h3>
+        <p> Name: ${name} <br> Address: ${address} </p>`;
+
+        // 2.program to check whether value and data-type of two variables are the same
+        const var1 = "42";
+        const var2 = 42;
+        const areSame = (var1 === var2);
+        document.getElementById("program2").innerHTML = 
+        `<h3>2. Check Value and Data-Type:</h3>
+        <p>var1: ${var1} (${typeof var1})<br>var2: ${var2} (${typeof var2})<br>Are they the same? ${areSame}</p>`;
+
+        // 3.program to add two strings and return them with all letters capitalized
+        const str1 = "hello";
+        const str2 = "world";
+        const concatenated = (str1 + " " + str2).toUpperCase();
+        const program3 = ``;
+        document.getElementById("program3").innerHTML = 
+        `<h3>3. Concatenate and Capitalize Strings:</h3>
+        <p>string1: ${str1} <br> string2: ${str2} <br>Concatenated and Capitalized: ${concatenated}</p>`;
+
+        // 4. program to convert the length of a string in bytes
+        const inputString = "Hello, World!";
+        const byteLength = new TextEncoder().encode(inputString).length;
+        document.getElementById("program4").innerHTML = `<h3>4. String Length in Bytes:</h3>
+        <p>String: ${inputString} <br> Byte Length: ${byteLength}</p>`;
+
+        // 5.program to round a number to a specified number of digits
+        const number = 123.456789;
+        const digits = 3;
+        const roundedNumber = number.toFixed(digits);
+        const program5 = ``;
+        document.getElementById("program5").innerHTML = 
+        `<h3>5. Round a Number:</h3>
+        Number: ${number}<br>Rounded to ${digits} digits: ${roundedNumber}`;
+    </script>
+</body>
+</html>
